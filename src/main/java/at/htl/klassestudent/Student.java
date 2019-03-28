@@ -22,6 +22,7 @@ public class Student implements Comparable<Student> {
     }
 
     public String getNachname() {
+
         return nachname;
     }
 
@@ -34,5 +35,12 @@ public class Student implements Comparable<Student> {
             return this.vorname.compareTo(o.getVorname());
         }
         return this.nachname.compareTo(o.getNachname());
+    }
+
+    @Override
+    public String toString() {
+        return "Student: " +
+                "nachname='" + nachname + '\'' +
+                ", vorname='" + vorname + '\'' ;
     }
 }
